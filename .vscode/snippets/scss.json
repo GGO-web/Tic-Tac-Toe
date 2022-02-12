@@ -1,0 +1,254 @@
+{
+  	"Adaptive Value": {
+		"scope": "scss",
+		"prefix": "av",
+		"body": [
+			"@include adaptiveValue(\"${1:font-size}\", $2, $3);"
+		]
+	},
+	"EM": {
+		"scope": "scss",
+		"prefix": "em",
+		"body": [
+			"em($1,$2)"
+		],
+		"description": "to EM"
+	},
+	"REM": {
+		"scope": "scss",
+		"prefix": "rem",
+		"body": [
+			"rem($1)"
+		],
+		"description": "to REM"
+	},
+	"Percent": {
+		"scope": "scss",
+		"prefix": "prc",
+		"body": [
+			"percent($1,$2)"
+		],
+		"description": "Mixin converts to %"
+	},
+	"Percent padding": {
+		"scope": "scss",
+		"prefix": "pbp",
+		"body": [
+			"padding-bottom: percent($1,$2);"
+		],
+		"description": "Padding botton in %"
+	},
+	"Font Size in REM": {
+		"scope": "scss",
+		"prefix": "fz",
+		"body": [
+			"font-size: rem($1);"
+		],
+		"description": "PX to REM"
+	},
+	"Divade": {
+		"scope": "scss",
+		"prefix": "di",
+		"body": [
+			"math.div($1,$2)"
+		],
+		"description": "Division of numbers"
+	},
+	"Width with REM": {
+		"scope": "scss",
+		"prefix": "w",
+		"body": "width: rem($1);",
+		"description": "Add width in 'rem' unit"
+	},
+	"Height with REM": {
+		"scope": "scss",
+		"prefix": "h",
+		"body": "height: rem($1);",
+		"description": "Add height in 'rem' unit"
+	},
+	"Margin bottom with EM": {
+		"scope": "scss",
+		"prefix": "mbe",
+		"body": "margin-bottom: math.div($1, $2) + em;",
+		"description": "Add margin bottom in 'em' unit"
+	},
+	"Not last-child": {
+		"scope": "scss",
+		"prefix": "nlc",
+		"body": [
+			"&:not(:last-child) {\n\t$1\n}"
+		]
+	},
+	"Opacity": {
+		"scope": "scss",
+		"prefix": "op",
+		"body": "opacity: ${1:0};",
+		"description": "Relative opacity"
+	},
+	"Line height": {
+		"scope": "scss",
+		"prefix": "lh",
+		"body": "line-height: math.div($1 , $2);",
+		"description": "Relative line-height"
+	},
+	"Max width": {
+		"scope": "scss",
+		"prefix": "mw",
+		"body": "max-width: rem($1);",
+		"description": "Max width in 'em' unit"
+	},
+	"@media max": {
+		"prefix": "md",
+		"body": [
+			"@media (max-width: em($1)){\n\t $2 \n}"
+		],
+		"description": "Media query with max-width in 'em' unit"
+	},
+	"@media min": {
+		"prefix": "mmd",
+		"body": [
+			"@media (min-width:em($1)){\n\t $2 \n}"
+		],
+		"description": "Media query with min-width in 'em' unit"
+	},
+  	"art": {
+		"prefix": "art",
+		"body": [
+			"width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-bottom: 100px solid red;"
+		],
+		"description": "art"
+	},
+	"arb": {
+		"prefix": "arb",
+		"body": [
+			"width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-top: 100px solid red;"
+		],
+		"description": "arb"
+	},
+	"arl": {
+		"prefix": "arl",
+		"body": [
+			"width: 0;height: 0;border-top: 50px solid transparent;border-right: 100px solid red;border-bottom: 50px solid transparent;"
+		],
+		"description": "arl"
+	},
+	"arr": {
+		"prefix": "arr",
+		"body": [
+			"width: 0;height: 0;border-top: 50px solid transparent;border-left: 100px solid red;border-bottom: 50px solid transparent;"
+		],
+		"description": "arr"
+	},
+	"Extend": {
+		"prefix": "extend",
+		"body": [
+			"@extend %${1:};"
+		],
+		"description": "extend"
+	},
+	"Icons Font": {
+		"prefix": "icon",
+		"body": [
+			"@extend %ic;"
+		],
+		"description": "Import icon"
+	},
+	"lc": {
+		"prefix": "lc",
+		"body": [
+			"&:last-child{\n\t$0\n}"
+		],
+		"description": "lc"
+	},
+	"fc": {
+		"prefix": "fc",
+		"body": [
+			"&:first-child{\n\t$0\n}"
+		],
+		"description": "fc"
+	},
+	"BeforeAfter": {
+		"prefix": "ba",
+		"body": [
+			"&::before,&::after{\n\tcontent:'';\n\t$0\n}"
+		],
+		"description": "ba"
+	},
+	"After": {
+		"prefix": "aft",
+		"body": [
+			"&::after{\n\tcontent: \"\";\n\t$0\n}"
+		],
+		"description": "after"
+	},
+	"Before": {
+		"prefix": "bef",
+		"body": [
+			"&::before{\n\tcontent: \"\";\n\t$0\n}"
+		],
+		"description": "before"
+	},
+	"hv": {
+		"prefix": "hv",
+		"body": [
+			"&:hover{\n\t$0\n}"
+		],
+		"description": "hv"
+	},
+	"md1": {
+		"prefix": "md1",
+		"body": [
+			"@media (max-width:\\$pc){\n\t $0 \n}"
+		],
+		"description": "md1"
+	},
+	"mmd1": {
+		"prefix": "mmd1",
+		"body": [
+			"@media (min-width:\\$pc){\n\t $0 \n}"
+		],
+		"description": "md1"
+	},
+	"md2": {
+		"prefix": "md2",
+		"body": [
+			"@media (max-width:\\$tablet){\n\t$0\n}"
+		],
+		"description": "md2"
+	},
+	"mmd2": {
+		"prefix": "mmd2",
+		"body": [
+			"@media (min-width:\\$tablet){\n\t $0 \n}"
+		],
+		"description": "md1"
+	},
+	"md3": {
+		"prefix": "md3",
+		"body": [
+			"@media (max-width:\\$mobile){\n\t $0 \n}"
+		],
+		"description": "md3"
+	},
+	"mmd3": {
+		"prefix": "mmd3",
+		"body": [
+			"@media (min-width:\\$mobile){\n\t $0 \n}"
+		],
+		"description": "md1"
+	},
+	"md4": {
+		"prefix": "md4",
+		"body": [
+			"@media (max-width:\\$mobileSmall){\n\t $0 \n}"
+		],
+		"description": "md4"
+	},
+	"mmd4": {
+		"prefix": "mmd4",
+		"body": [
+			"@media (min-width:\\$mobileSmall){\n\t $0 \n}"
+		],
+		"description": "md1"
+	}
+}

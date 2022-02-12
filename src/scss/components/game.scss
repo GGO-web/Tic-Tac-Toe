@@ -1,0 +1,96 @@
+.game {  
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: calc(3 * var(--cell-width));
+  height: calc(3 * var(--cell-width));
+  
+  @include adaptiveValue("--cell-width", 120, 70);
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    border-radius: 5px;
+    width: 0;
+    height: 4px;
+    background-color: var(--color-red);
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    border: 3px solid var(--color-light);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  &-wrapper {
+    padding: 20px 0;
+  }
+
+  &__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #000;
+    padding: 20px;
+
+    @include adaptiveValue("width", 120, 70);
+    @include adaptiveValue("height", 120, 70);
+
+    * {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:disabled {
+      cursor: initial;
+    }
+  }
+
+  &[data-direction="horizontal"] {
+    &::before {
+      top: calc((var(--value) - 1) * var(--cell-width) + var(--cell-width) / 2);
+      width: 100%;
+      transform: translateY(-50%);
+      transition: width 0.5s;
+    }
+  }
+
+  &[data-direction="vertical"] {
+    &::before {
+      left: calc((var(--value) - 1) * var(--cell-width) + var(--cell-width) / 2);
+      top: 0;
+      width: 4px;
+      height: 100%;
+      transform: translateX(-50%);
+      transition: height 0.5s;
+    }
+  }
+
+  &[data-direction="main"] {
+    &::before {
+      left: 3px;
+      top: 3px;
+      width: 135%;
+      height: 4px;
+      transform: rotate(45deg);
+      transform-origin: left center;
+      transition: width 0.5s;
+    }
+  }
+
+  &[data-direction="lateral"] {
+    &::before {
+      right: 3px;
+      top: 3px;
+      width: 135%;
+      height: 4px;
+      transform: rotate(-45deg);
+      transform-origin: right center;
+      transition: width 0.5s;
+    }
+  }
+}

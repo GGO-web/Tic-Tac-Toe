@@ -1,0 +1,93 @@
+.versus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 700px;
+  --offset: -60px;
+
+  @include adaptiveValue("font-size", 36, 24);
+
+  &__split {
+    position: relative;
+    font-family: "Redressed";
+    text-transform: uppercase;
+    margin: 20px 0;
+    background: url("@img/text-bg.jpg");
+    background-size: 600px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slide 10s linear infinite;
+
+    @include adaptiveValue("font-size", 64, 36);
+  }
+
+  &__red,
+  &__blue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include adaptiveValue("min-width", 200, 80);
+  }
+
+  &__red {
+    margin-bottom: var(--offset);
+    align-self: flex-start;
+  }
+
+  &__blue {
+    margin-top: var(--offset);
+    align-self: flex-end;
+  }
+
+  &__mark {
+    text-transform: uppercase;
+    font-family: "Redressed";
+
+    &::after{
+      content: attr(data-wins);
+      vertical-align: super;
+      font-size: 0.7em;
+      font-family: "Ubuntu", sans-serif;
+    }
+  }
+
+  &__mark_red {
+    color: var(--color-red);
+  }
+
+  &__name {
+    margin: 10px 0;
+    box-shadow: inset 0 0 0 var(--color-orange);
+    transition: box-shadow 0.3s;
+    color: #14213d;
+    
+    &.active {
+      box-shadow: inset 0 -20px 0 var(--color-orange);
+    }
+  }
+
+  &__mark_blue {
+    color: var(--color-blue);
+  }
+
+  &__cross,
+  &__circle {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@keyframes slide {
+  from {
+    background-position: 300px center;
+  }
+
+  to {
+    background-position: 0px center;
+  }
+}

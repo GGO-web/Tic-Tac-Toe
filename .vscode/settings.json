@@ -1,0 +1,127 @@
+{
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "editor.fontSize": 16,
+  "emmet.excludeLanguages": [
+    "markdown"
+  ],
+  "files.encoding": "utf8",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css/"
+    }
+  ],
+  "ecsstractor_port.destination": "clipboard",
+  "editor.mouseWheelZoom": true,
+  "ecsstractor_port.bem_nesting": true,
+  "ecsstractor_port.modifier_separator": "--",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.donotVerifyTags": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tabSize": 2,
+  "prettier.tabWidth": 2,
+  "explorer.confirmDelete": false,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.terminalRoot": "/",
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "files.associations": {
+    "*.js": "javascript",
+    "*.html": "html",
+    "*.mjml": "mjml"
+  },
+  "emmet.syntaxProfiles": {
+    "php": "html"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "html.format.wrapLineLength": 0,
+  "debug.onTaskErrors": "debugAnyway",
+  "svg.preview.mode": "svg",
+  "svg.completion.showAdvanced": true,
+  "svg.minify.addClassesToSVGElement": true,
+  "svg.preview.autoShow": true,
+  "emmet.includeLanguages": {
+    "svg": "html",
+    "mjml": "html"
+  },
+  "json.maxItemsComputed": 15000,
+  "workbench.colorCustomizations": {
+    "[Material Theme Lighter]": {
+      "activityBarBadge.background": "#7CB342",
+      "activityBar.activeBorder": "#7CB342",
+      "list.activeSelectionForeground": "#7CB342",
+      "list.inactiveSelectionForeground": "#7CB342",
+      "list.highlightForeground": "#7CB342",
+      "scrollbarSlider.activeBackground": "#7CB34250",
+      "editorSuggestWidget.highlightForeground": "#7CB342",
+      "textLink.foreground": "#7CB342",
+      "progressBar.background": "#7CB342",
+      "pickerGroup.foreground": "#7CB342",
+      "tab.activeBorder": "#7CB342",
+      "notificationLink.foreground": "#7CB342",
+      "editorWidget.resizeBorder": "#7CB342",
+      "editorWidget.border": "#7CB342",
+      "settings.modifiedItemIndicator": "#7CB342",
+      "settings.headerForeground": "#7CB342",
+      "panelTitle.activeBorder": "#7CB342",
+      "breadcrumb.activeSelectionForeground": "#7CB342",
+      "menu.selectionForeground": "#7CB342",
+      "menubar.selectionForeground": "#7CB342",
+      "editor.findMatchBorder": "#7CB342",
+      "selection.background": "#7CB34240",
+      "statusBarItem.remoteBackground": "#7CB342"
+    }
+  },
+  "materialTheme.accent": "Lime",
+  "editor.wordWrap": "on",
+  "editor.wordSeparators": "`~!@#$%^&*()-=_+[{]}\\|;:'\",.<>/?",
+  "editor.renderWhitespace": "none",
+  "workbench.colorTheme": "GitHub Light Default",
+  "editor.formatOnSave": true,
+  "ecsstractor_port.indentation": "",
+  "ecsstractor_port.brackets_newline_after": false,
+  "ecsstractor_port.empty_line_before_nested_selector": false,
+  // Beautify
+  "html.format.indentInnerHtml": true,
+  "html.format.extraLiners": " ",
+  "files.eol": "\r\n",
+  "code-runner.clearPreviousOutput": true,
+  "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
+  "code-runner.runInTerminal": true,
+  "emmet.preferences": {
+    "output.reverseAttributes": true
+  },
+  "editor.linkedEditing": true,
+  "diffEditor.wordWrap": "off",
+  "prettier.stylelintIntegration": true,
+  "prettier.eslintIntegration": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "svipas.prettier-plus",
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.run": "onSave",
+  // "[css]": {
+  //    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  "bracketPairColorizer.depreciation-notice": false,
+  "path-autocomplete.pathMappings": {
+    "@img": "${folder}/src/img",
+    "@scss": "${folder}/src/scss",
+    "@js": "${folder}/src/js",
+  },
+  "ecsstractor_port.add_comment": false,
+  "htmlhint.options": {
+    "doctype-first": false
+  },
+  // "liveServer.settings.useLocalIp": true
+}

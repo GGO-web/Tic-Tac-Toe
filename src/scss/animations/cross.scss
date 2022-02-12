@@ -1,0 +1,58 @@
+.cross {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  color: var(--color-red);
+
+  &::before,
+  &::after {
+    content: "";
+    transform-origin: center center;
+    position: absolute;
+    height: 4px;
+    border-radius: 5px;
+    background-color: currentColor;
+    width: 0;
+    top: 0;
+    animation: fade-in 0.5s forwards;
+  }
+
+  &::before {
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    right: 0;
+    transform: rotate(-45deg);
+  }
+
+  &.hide {
+    &::before,
+    &::after {
+      animation: fade-out 0.5s forwards;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    width: 0;
+    top: 0;
+  }
+  to {
+    width: 100%;
+    top: 50%;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    width: 100%;
+    top: 50%;
+  }
+  to {
+    width: 0;
+    top: 0;
+  }
+}

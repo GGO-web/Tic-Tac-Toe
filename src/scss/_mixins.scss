@@ -1,0 +1,85 @@
+$maxWidthContainer: 992;
+$containerWidth: 1022;
+$minMobile: 320;
+
+//Percent
+@function percent($px, $from) {
+  $result: math.div($px, $from) * 100%;
+
+  @return $result;
+}
+
+//REM
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+
+  @return $result;
+}
+
+//EM
+@function em($px, $current: 16) {
+  $result: math.div($px, $current) + em;
+
+  @return $result;
+}
+
+@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minMobile, $keepSize: 0) {
+  // for calc();
+  $addSize: math.div($startSize - $minSize, 16);
+
+  // breakpoints in EM
+  $widthFromMedia: em($widthFrom);
+  $widthToMedia: em($widthTo);
+
+  // Source: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+  $slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+  $yIntersection: -$widthTo * $slope + $minSize;
+  $flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw;
+
+  // get property value
+  $propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"};
+
+  @if $widthFrom == $containerWidth and $maxWidthContainer == 0 {
+    $widthFrom: $maxWidth;
+  }
+
+  @if $minSize <= 0 {
+    $minSize: 0.0001;
+  }
+
+  @if $startSize <= 0 {
+    $startSize: 0.0001;
+  }
+
+  // if negative value
+  @if $minSize > $startSize {
+    $propertyValue: #{"clamp(" rem($startSize) "," $flyValue "," rem($minSize) ")"};
+  }
+
+  @if $widthFrom == $containerWidth or $widthFrom == $maxWidth or $keepSize == 1 or $keepSize == 2 {
+    @media (min-width: $widthFromMedia) {
+      #{$property}: rem($startSize);
+    }
+  }
+
+  @media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+    // if clamp() supports;
+    @supports (#{$property}: $propertyValue) {
+      #{$property}: $propertyValue;
+    }
+
+    // if clamp() is not supports;
+    @supports not (#{$property}: $propertyValue) {
+      #{$property}: calc(
+        #{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) -
+          math.div($widthTo, 16)}
+      );
+    }
+  }
+
+  @if $widthTo == $minMobile or $keepSize == 1 or $keepSize == 3 {
+    @media (max-width: $widthToMedia) {
+      #{$property}: rem($minSize);
+    }
+  }
+}

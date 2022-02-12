@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    "syler.sass-indented",
+    "stylelint.vscode-stylelint",
+    "jerryhong.autofilename",
+    "editorconfig.editorconfig",
+    "mkaufman.htmlhint",
+    "ritwickdey.liveserver",
+    "dbaeumer.vscode-eslint",
+    "rebornix.project-snippets",
+    "formulahendry.auto-rename-tag",
+    "coenraads.bracket-pair-colorizer",
+    "kisstkondoros.vscode-gutter-preview",
+    "equinusocio.vsc-material-theme",
+    "ionutvmi.path-autocomplete",
+    "christian-kohler.path-intellisense",
+    "svipas.prettier-plus",
+    "esbenp.prettier-vscode",
+    "shan.code-settings-sync",
+    "jock.svg",
+    "cssho.vscode-svgviewer"
+  ]
+}

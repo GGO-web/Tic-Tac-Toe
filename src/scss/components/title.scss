@@ -1,0 +1,9 @@
+.title {
+  text-align: center;
+  color: var(--color-orange);
+  border-top: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
+  padding: 10px 0;
+  
+  @include adaptiveValue("font-size", 36, 32);
+}

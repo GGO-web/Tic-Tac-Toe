@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Modules</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&family=Ubuntu&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="site-wrapper container">
+      <div class="game-start">
+        <form action="#" class="game-start__inner form container">
+          <h1 class="title">Tic-Tac-Toe Game</h1>
+          <label class="game-start__label">
+            <span>Enter player #1 name:</span>
+            <input class="game-start__input" type="text" />
+          </label>
+          <label class="game-start__label">
+            <span>Enter player #2 name:</span>
+            <input class="game-start__input" type="text" />
+          </label>
+          <button type="submit" class="game-start__button button-style">
+            OK
+          </button>
+        </form>
+      </div>
+
+      <div class="versus">
+        <div class="versus__red">
+          <sup class="versus__mark versus__mark_red">red</sup>
+          <span class="versus__name" data-state="red"></span>
+          <div role="presentation" aria-hidden="true" class="cross versus__cross"></div>
+        </div>
+        <span class="versus__split">
+          vs
+        </span>
+        <div class="versus__blue">
+          <sup class="versus__mark versus__mark_blue">blue</sup>
+          <span class="versus__name" data-state="blue"></span>
+          <div role="presentation" aria-hidden="true" class="circle versus__circle"></div>
+        </div>
+      </div>
+
+      <div class="game-wrapper">
+        <div class="game">
+        </div>
+        <div class="controls">
+          <button class="controls__button controls__new-game btn-reset">New Game</button>
+          <button class="controls__button controls__reset btn-reset">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

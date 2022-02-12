@@ -1,0 +1,264 @@
+{
+	"Spollers": {
+		"scope": "html",
+		"prefix": "spollers",
+		"body": [
+			"<div data-spollers class=\"spollers\">\n\t<div class=\"spollers__item\">\n\t\t<button type=\"button\" data-spoller class=\"spollers__title btn-reset\">Spoller Title</button>\n\t\t<div class=\"spollers__body\">Spoller content</div>\n\t</div>\n</div>"
+		],
+		"description": "Add spollers"
+	},
+	"Tabs": {
+		"scope": "html",
+		"prefix": "tabs",
+		"body": [
+			"<div data-tabs class=\"${1:tabs}\">\n\t<nav data-tabs-titles class=\"${1:tabs}__navigation\">\n\t\t<button type=\"button\" class=\"${1:tabs}__title _tab-active\">Tab №1</button>\n\t\t<button type=\"button\" class=\"${1:tabs}__title\">Tab №2</button>\n\t\t<button type=\"button\" class=\"${1:tabs}__title\">Tab №3</button>\n\t</nav>\n\t<div data-tabs-body class=\"${1:tabs}__content\">\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\t1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error molestias!\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\t2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error molestias!\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\t3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error molestias!\n\t\t</div>\n\t</div>\n</div>"
+		],
+		"description": "Add tabs"
+	},
+	"Show More": {
+		"scope": "html",
+		"prefix": "showmore",
+		"body": [
+			"<div data-showmore class=\"${1:block}\">\n\t<div data-showmore-content class=\"${1:block}__content\"></div>\n\t<button hidden data-showmore-button type=\"button\" class=\"${1:block}__more\"><span>Show more</span><span>Show less</span></button>\n</div>"
+		],
+		"description": "Add showmore button"
+	},
+	"Add tooltip": {
+		"scope": "html",
+		"prefix": "tip",
+		"body": [
+			"data-tippy-content=\"Tip\""
+		],
+		"description": "Add tooltip (Tippy)"
+	},
+	"Add data-required": {
+		"scope": "html",
+		"prefix": "req",
+		"body": [
+			"data-required"
+		],
+		"description": "The required field"
+	},
+	"Add dynamic adapt": {
+		"scope": "html",
+		"prefix": "da",
+		"body": [
+			"data-da=\".${1:block name}, 768\""
+		],
+		"description": "Add dynamic adaptive attribute"
+	},
+	"Add data-popup": {
+		"scope": "html",
+		"prefix": "pl",
+		"body": [
+			"data-popup=\"$1\""
+		],
+		"description": "Add popup attribute"
+	},
+	"Add basic Popup": {
+		"scope": "html",
+		"prefix": "popup",
+		"body": [
+			"<div aria-hidden=\"true\" class=\"popup\">",
+			"\t<div class=\"popup__wrapper\">",
+			"\t\t<div class=\"popup__content\">",
+			"\t\t\t<button data-close class=\"popup__close btn-reset\">Close</button>",
+			"\t\t\t<div class=\"popup__content-wrapper\">",
+			"\t\t\t</div>",
+			"\t\t</div>",
+			"\t</div>",
+			"</div>"
+		]
+	},
+  "Add burger button": {
+    "prefix": "burger",
+    "body": [
+      "<button class=\"menu__icon icon-menu btn-reset\" aria-label=\"Open menu\" aria-expanded=\"false\" aria-controls=\"menu\">",
+      "\t<span></span>",
+      "</button>"
+    ]
+  },
+  "Add input tag": {
+		"prefix": "input",
+		"body": [
+      "<label class=\"visually-hidden\" for=\"$1\">$2</label>",
+      "\t<input id=\"$1\" class=\"input-style input-reset\" name=\"name\" type=\"text\" placeholder=\"\" data-required=\"text\" data-validate=\"true\">"
+    ]
+  },
+  "Add input name": {
+		"prefix": "input-name",
+		"body": [
+      "<label class=\"visually-hidden\" for=\"$1\">$2</label>",
+      "<input id=\"$1\" class=\"input-style input-reset\" name=\"name\" type=\"text\" placeholder=\"Name*\" data-required=\"name\" data-validate=\"true\">"
+    ]
+  },
+  "Add input tel": {
+		"prefix": "input-tel",
+		"body": [
+      "<label class=\"visually-hidden\" for=\"$1\">$2</label>",
+      "<input id=\"$1\" class=\"input-style input-reset\" name=\"tel\" type=\"tel\" placeholder=\"Phone*\" data-required=\"tel\" data-validate=\"true\">"
+    ]
+  },
+  "Add input email": {
+		"prefix": "input-email",
+		"body": [
+      "<label class=\"visually-hidden\" for=\"$1\">$2</label>",
+      "<input id=\"$1\" class=\"input-style input-reset\" name=\"email\" type=\"email\" placeholder=\"Email*\" data-required=\"email\" data-validate=\"true\">"
+    ]
+  },
+  "Add input file": {
+		"prefix": "input-file",
+		"body": [
+      "<div class=\"file\">",
+      "\t<div class=\"file__item\">",
+      "\t\t<input class=\"file__input\" accept=\".pdf, .docx, .jpg, .png, .webp\" type=\"file\" multiple name=\"files[]\">",
+      "\t\t<button type=\"button\" tabindex=\"-1\" class=\"file__button btn-reset\">Choose</button>",
+      "\t\t<span class=\"file__chosen\">No files chosen</span>",
+      "\t</div>",
+      "</div>"
+    ]
+  },
+  "Add textarea message": {
+		"prefix": "input-message",
+		"body": [
+      "<label class=\"visually-hidden\" for=\"$1\">$2</label>",
+      "<textarea id=\"$1\" class=\"input-style input-message input-reset\" name=\"message\" placeholder=\"Message\" data-required=\"message\" data-validate=\"true\"></textarea>"
+    ]
+  },
+	"Quantity": {
+		"scope": "html,kit",
+		"prefix": "quantity",
+		"body": [
+			"<div class=\"quantity\">",
+      "\t<button type=\"button\" class=\"quantity__button quantity__button_minus btn-reset\">-</button>",
+      "\t<input class=\"input-reset quantity__input\" type=\"number\" min=\"1\" max=\"50\" name=\"quantity\" value=\"1\">",
+      "\t<button type=\"button\" class=\"quantity__button quantity__button_plus btn-reset\">+</button>",
+      "</div>"
+		],
+		"description": "Quantity input component"
+	},
+	"Textarea": {
+		"prefix": "textarea",
+		"body": "<textarea name=\"${1:message}\" placeholder=\"$2\" class=\"input-style input-reset\" ${3:data-validate=\"message\"}></textarea>",
+		"description": "Form textarea"
+	},
+	"Select": {
+		"prefix": "select",
+		"body": [
+			"<select class=\"product__form-select\" name=\"${1:select}\">",
+			"\t<option value=\"\" selected>${2:Select title}</option>",
+			"\t<option value=\"1\">$3</option>",
+			"\t<option value=\"2\">$4</option>",
+			"</select>"
+		],
+		"description": "Custom select"
+	},
+	"Form fieldset": {
+		"prefix": "fieldset",
+		"body": [
+			"<fieldset class=\"$1 form__fieldset\">",
+			"\t$0",
+			"</fieldset>"
+		],
+		"description": "Form group title"
+	},
+	"Form legend": {
+		"prefix": "legend",
+		"body": [
+			"<legend class=\"form__legend ${1:visually-hidden}\">",
+			"\t$2",
+			"</legend>"
+		],
+		"description": "Form group title"
+	},
+	"Radio buttons": {
+		"prefix": "radio",
+		"body": [
+			"<div class=\"options\">",
+			"\t<div class=\"options__item\">",
+			"\t\t<input id=\"${3:radio1}\" class=\"options__input input-reset\" name=\"${1:radio-group}\" type=\"radio\" ${7:required} checked>",
+			"\t\t<label class=\"options__label ${2:visually-hidden}\" for=\"${3:radio1}\">$4</label>",
+			"\t</div>",
+			"\t<div class=\"options__item\">",
+			"\t\t<input id=\"${5:radio2}\" class=\"options__input input-reset\" name=\"${1:radio-group}\" type=\"radio\" ${7:required}>",
+			"\t\t<label class=\"options__label ${2:visually-hidden}\" for=\"${5:radio2}\">$6</label>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Radio buttons snippet"
+	},
+	"CheckBox": {
+		"prefix": "checkbox",
+		"body": [
+			"<div class=\"checkbox\">",
+			"\t<input id=\"${1:checkbox}\" class=\"checkbox__input\" type=\"checkbox\" name=\"agree_checkbox\" data-required data-validate=\"true\"",
+			"\t<label for=\"${1:checkbox}\" class=\"checkbox__label\">",
+      "\t\t<svg viewBox=\"0 0 21 21\">",
+      "\t\t\t<path d=\"M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186\"></path>",
+      "\t\t</svg>",
+      "\t\t<span class=\"checkbox__text\">${2:Text}</span></label>",
+			"</div>"
+			],
+		"description": "Custom checkbox"
+	},
+	"Button": {
+		"prefix": "button",
+		"body": "<button class=\"button-style btn-reset\">$1</button>",
+		"description": "Standard button snippet"
+	},
+	"menu": {
+		"prefix": "menu",
+		"body": [
+			"<div class=\"menu\">",
+      "\t<button class=\"menu__icon icon-menu btn-reset\" aria-label=\"Open menu\" aria-expanded=\"false\" aria-controls=\"menu\">",
+      "\t\t<span></span>",
+      "\t</button>\n",
+			"\t<nav id=\"menu\" class=\"menu__body\">",
+			"\t\t<ul class=\"menu__list list-reset\">",
+			"\t\t\t<li class=\"menu__item\">",
+			"\t\t\t\t<a href=\"#!\" class=\"menu__link\"></a>",
+			"\t\t\t</li>$0",
+			"\t\t</ul>",
+			"\t</nav>",
+			"</div>"
+		],
+		"description": "menu"
+	},
+  "list": {
+    "prefix": "ul",
+    "body": [
+      "<ul class=\"$1__list list-reset\">",
+      "\t<li class=\"$1__item\">\n\t\t$0",
+      "\t</li>",
+      "\t<li class=\"$1__item\">\n\t\t",
+      "\t</li>",
+      "\t<li class=\"$1__item\">\n\t\t",
+      "\t</li>",
+      "</ul>"
+    ],
+    "description": "Add standard unordered list structure"
+  },
+	"logo": {
+		"prefix": "logo",
+		"body": [
+			"<a href=\"index.html\" class=\"$1__logo logo\" title=\"$2\">",
+      "\t<img class=\"logo__img\" src=\"@img/icons/logo.svg\" alt=\"$3\">",
+    	"</a>"
+		],
+		"description": "logo"
+	},
+	"Image": {
+		"prefix": "img",
+		"body": "<img data-src=\"@img$0\" alt=\"\">",
+		"description": "img"
+	},
+  "Svguse": {
+    "prefix": "svg",
+    "body": [
+      "<svg aria-hidden=\"true\" class=\"$1\">",
+      "\t<use xlink:href=\"@img/sprite.svg#$2\"></use>",
+      "</svg>"
+    ],
+    "description": "svg sprite use"
+  }
+}

@@ -1,0 +1,15 @@
+@use "sass:math"; // use math functions
+
+@import "./_vars.scss";
+@import "./_reset.scss";
+@import "./_mixins.scss";
+@import "./_settings.scss";
+
+@import "./_animations.scss";
+
+@import "./components/button-style.scss";
+@import "./components/title.scss";
+@import "./components/game-start.scss";
+@import "./components/versus.scss";
+@import "./components/game.scss";
+@import "./components/controls.scss";
